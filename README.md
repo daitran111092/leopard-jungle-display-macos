@@ -164,6 +164,9 @@ and < 120 MB footprint.
 
 ## How it works
 
+The full design (data sources, rendering, panel session, and why each approach was chosen) is in
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
 ```
 sources (audio, Bluetooth, system, now playing, hot keys)
    → reducer → AppStore (state)
@@ -208,13 +211,14 @@ frame, as the Windows app does, fixed that.
 1. Fork, then branch from `main` (`feat/…`, `fix/…`).
 2. Keep the layering: protocol and state logic go in `LJCore`, anything that touches IOKit / CoreAudio / Bluetooth
    goes in `LJSources`, views go in `LJUI`, and wiring goes in `LJApp`.
-3. Add or update tests next to the code you change, and run `make test`. All tests must pass.
-4. For UI changes, add a case to `Sources/LJUI/Fixtures.swift` if needed, run `make fixtures`, and check the PNGs in
+3. Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) before changing the frame loop, encoder or transport.
+4. Add or update tests next to the code you change, and run `make test`. All tests must pass.
+5. For UI changes, add a case to `Sources/LJUI/Fixtures.swift` if needed, run `make fixtures`, and check the PNGs in
    `out/fixtures/`. Attach a before / after picture to the PR.
-5. For panel or transport changes, test on real hardware with `ljprobe panel --soak 60` and `ljprobe stream`, and
+6. For panel or transport changes, test on real hardware with `ljprobe panel --soak 60` and `ljprobe stream`, and
    check the stats line in the log (fps, frame gaps / late frames, JPEG size).
-6. Never add opcodes that write to the panel's flash (restart, OTA, region, serial, file writes).
-7. Use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `refactor:` …) and open a PR
+7. Never add opcodes that write to the panel's flash (restart, OTA, region, serial, file writes).
+8. Use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `refactor:` …) and open a PR
    against `main`.
 
 To update the vendored adapter, copy the new upstream sources into `vendor/mediaremote-adapter`, update

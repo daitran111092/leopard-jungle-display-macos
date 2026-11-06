@@ -1,0 +1,6 @@
+SVN-Road Rage — Vietnamese version by D3design of "Road Rage" by Youssef Habchi.
+Copyright (c) 2016 by Youssef Habchi. All rights reserved.
+License (from the font's name table): Free for personal use only.
+
+This font is bundled for the owner's personal use of LJ Display. Remove it (and switch
+Fonts.Face.display to an OFL face) before any public release or redistribution.

@@ -1,0 +1,4 @@
+module CTurboJPEG [system] {
+    header "/opt/homebrew/opt/jpeg-turbo/include/turbojpeg.h"
+    export *
+}

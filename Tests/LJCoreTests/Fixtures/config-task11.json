@@ -1,0 +1,19 @@
+{
+  "accounts" : [
+
+  ],
+  "brightness" : 100,
+  "maxFps" : 60,
+  "shortcuts" : {
+    "k1" : "F16",
+    "k2" : "F17",
+    "k3" : "F18",
+    "k3Hold" : "Shift+F18",
+    "nextPage" : "F19",
+    "press" : "F15",
+    "prevPage" : "Shift+F19",
+    "turnLeft" : "F13",
+    "turnRight" : "F14"
+  },
+  "theme" : "jinx"
+}

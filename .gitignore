@@ -1,0 +1,9 @@
+.build/
+dist/
+.superpowers/
+out/
+.DS_Store
+.remember/
+vendor/mediaremote-adapter/MediaRemoteAdapter.framework/
+vendor/mediaremote-adapter/build/
+docs/superpowers/
